@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Corpo */
+body {
+  background: linear-gradient(135deg, #000000, #2b0000, #ff0000); /* Preto e vermelho institucional */
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card principal */
+#container {
+  width: 360px;
+  min-height: 90vh;
+  background: url('./assets/bg-click-ambiental.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Overlay em vermelho translúcido */
+#container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.45), rgba(0, 0, 0, 0.5));
+  border-radius: 20px;
+  z-index: 0;
+  backdrop-filter: blur(3px);
+}
+
+#container > * {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Perfil */
+#profile {
+  margin-bottom: 28px;
+}
+
+#profile img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+}
+
+#profile h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+#profile p {
+  font-size: 1rem;
+  color: #fca5a5;
+  font-weight: 500;
+}
+
+/* Menu de contato */
+nav {
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+nav .menu li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+nav .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.35s ease;
+  width: 100%;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+nav .menu a:hover {
+  background: linear-gradient(90deg, #ff0000, #b91c1c);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.6);
+}
+
+/* Ícones */
+nav .menu i {
+  font-size: 1.2rem;
+}
+
+/* Redes sociais */
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#social-links a {
+  color: #f87171;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#social-links a:hover {
+  color: #fff;
+  transform: scale(1.25);
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #e5e7eb;
+}
+
+/* Animações */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 420px) {
+  #container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #profile img {
+    width: 95px;
+    height: 95px;
+  }
+
+  #profile h2 {
+    font-size: 1.2rem;
+  }
+
+  nav .menu a {
+    font-size: 0.95rem;
+  }
+}
