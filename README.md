@@ -39,6 +39,10 @@ Fácil personalização (HTML/CSS/JS puro)
 
 HTML5
 
+CSS3
+
+JavaScript (Vanilla)
+
 📁 Estrutura sugerida (resumida)
 click-saude-ambiental/
 ├─ assets/
@@ -50,7 +54,3 @@ click-saude-ambiental/
 ├─ servicos.css
 ├─ script.js
 └─ README.md
-
-CSS3
-
-JavaScript (Vanilla)
